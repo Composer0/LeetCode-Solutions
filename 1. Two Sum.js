@@ -4,12 +4,13 @@
  * @return {number[]}
  */
 
-var nums = [2,9,11,15]; //this is what the code was running against.
+// var nums = [2,9,11,15]; //this is what the code was running against.
 
 
 //Solution
 
- var twoSum = function(nums, target) {
+ var twoSum = function(nums, target) { //The way this function could typically start is as function twoSum()... unsure why the writers of this exercise have chosen to introduce it as a variable.
+    var nums = [2,9,11,15]; //the above variable has to be brought into scope for the function to successfully run.
     let map = new Map; //Map constructor creates a new Map object. I am assuming this takes the values presented in nums and creates an array from them to be manipulated in the code below.
     for (var i = 0; i < nums.length; i++) {
         let complement = target - nums[i];
@@ -21,6 +22,17 @@ var nums = [2,9,11,15]; //this is what the code was running against.
 };
 
 //Solution
+
+//How to run it
+twoSum([],17);
+//first is the empty array to be searched through. The second is the target number. If the number is not possible the result will be undefined. If the number is achieveable the indexes of both numbers used from the array will be listed.
+// ex. (2) [0,3]
+// 0: 0
+// 1: 3
+//length: 2
+
+
+
 
 // Question
 
